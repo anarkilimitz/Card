@@ -31,11 +31,13 @@
     transition: transform 0.5s ease;
 }
 
-.card:hover::before {
+.card:hover::before,
+.card:focus-within::before {
     transform: scaleX(1);
 }
 
-.card:hover {
+.card:hover,
+.card:focus-within {
     background-color: transparent;
 }
 
