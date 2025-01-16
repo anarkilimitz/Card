@@ -1,0 +1,39 @@
+.card {
+    width: 200px;
+    height: 250px;
+    background-color: rgba(0, 128, 0, 0.5); /* Тусклый зеленый */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 191, 255, 0.5), rgba(128, 0, 128, 0.5)); /* Голубой и фиолетовый */
+    transform: scaleX(2);
+    transform-origin: 0 50%;
+    transition: transform 0.5s ease;
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.card:hover {
+    background-color: transparent;
+}
