@@ -19,6 +19,11 @@ function createCards(count) {
         content.appendChild(description);
         card.appendChild(content);
 
+        // Добавляем обработчики событий для мобильных устройств
+        card.addEventListener('ontouchstart', () => {
+            card.classList.toggle('active');
+        });
+
         container.appendChild(card);
     }
 }
@@ -26,7 +31,7 @@ function createCards(count) {
 // Вызываем функцию для создания 10 новых карточек
 createCards(10);
 
-// Удаляем обработчики событий для мобильного поведения
+// Удаляем обработчики событий для мобильных устройств
 Array.from(document.querySelectorAll('.card')).forEach((card) => {
     card.removeEventListener('click');
 });
