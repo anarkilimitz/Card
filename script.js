@@ -25,3 +25,11 @@ function createCards(count) {
 
 // Вызываем функцию для создания 10 новых карточек
 createCards(10);
+
+// Удаляем обработчики событий для мобильного поведения
+Array.from(document.querySelectorAll('.card')).forEach((card) => {
+    card.removeEventListener('click');
+});
+
+// Вызываем функцию для создания 10 новых карточек
+createCards(10);
