@@ -26,7 +26,6 @@ function createCards(count) {
 
         container.appendChild(card);
     }
-}
 
 // Вызываем функцию для создания 10 новых карточек
 createCards(10);
