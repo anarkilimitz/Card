@@ -32,12 +32,12 @@
 }
 
 .card:hover::before,
-.card:focus-within::before {
+.card:active::before {
     transform: scaleX(1);
 }
 
 .card:hover,
-.card:focus-within {
+.card:active {
     background-color: transparent;
 }
 
