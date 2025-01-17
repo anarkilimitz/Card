@@ -16,10 +16,11 @@
 }
 
 .card {
-	transition: 0.8s;
+	transition: 0.7s ease;
 }
 .card:hover {
-	transform: scale(1.05);
+	transform: translateY(-20px) scale(1,0.5);
+
 }
 
 .content {
