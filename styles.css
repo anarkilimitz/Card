@@ -16,10 +16,10 @@
 }
 
 .card {
-	transition: 0.7s;
+	transition: 0.8s;
 }
 .card:hover {
-	transform: rotate(180deg);
+	transform: scale(1.2);
 }
 
 .content {
