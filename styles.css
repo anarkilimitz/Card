@@ -19,7 +19,7 @@
 	transition: 0.7s;
 }
 .card:hover {
-	transform: scale(3);
+	transform: translate(20px, 20px) skew(20deg);
 }
 
 .content {
