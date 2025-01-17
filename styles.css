@@ -1,7 +1,7 @@
 .card {
     width: 200px;
     height: 250px;
-    background-color: rgba(0, 128, 0, 0.2); /* Тусклый зеленый */
+    background-color: rgba(138, 255, 241, 0.68);
     border-radius: 10px;
     display: flex;
     justify-content: center;
