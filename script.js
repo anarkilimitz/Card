@@ -20,20 +20,31 @@ function createCards(count) {
         card.appendChild(content);
 
         // Добавляем обработчики событий для мобильных устройств
-        card.addEventListener('ontouchstart', () => {
-            card.classList.toggle('active');
-        });
+        function handleTouchStart() {
+            this.classList.toggle('active');
+        }
+        
+        card.addEventListener('touchstart', handleTouchStart);
 
         container.appendChild(card);
     }
+}
 
 // Вызываем функцию для создания 10 новых карточек
 createCards(10);
 
 // Удаляем обработчики событий для мобильных устройств
-Array.from(document.querySelectorAll('.card')).forEach((card) => {
-    card.removeEventListener('click');
-});
+function removeHandlers() {
+    Array.from(document.querySelectorAll('.card')).forEach((card) => {
+        function handleTouchStart() {
+            this.classList.toggle('active');
+        }
+        card.removeEventListener('touchstart', handleTouchStart);
+    });
+}
 
-// Вызываем функцию для создания 10 новых карточек
+// Вызываем функцию для удаления обработчиков
+removeHandlers();
+
+// Снова вызываем функцию для создания 10 новых карточек
 createCards(10);
