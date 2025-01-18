@@ -1,7 +1,11 @@
+'use ctrict';
+
 .card {
     width: 200px;
     height: 250px;
-    background-color: rgba(138, 255, 241, 0.3);
+    -webkit-box-shadow: 0px 0px 6px 5px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 6px 5px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 6px 5px rgba(34, 60, 80, 0.2);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -10,17 +14,14 @@
     position: relative;
     overflow: hidden;
     margin: 10px;
-    -webkit-box-shadow: 0px 0px 6px 5px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 0px 0px 6px 5px rgba(34, 60, 80, 0.2);
-    box-shadow: 0px 0px 6px 5px rgba(34, 60, 80, 0.2);
 }
 
 .card {
-	transition: 0.7s ease;
+    transition: width 2s, height 2s, transform 0.5s;
 }
-.card:hover {
-	transform: scale(1.1);
 
+.card:hover {
+    transform: rotate(360deg);
 }
 
 .content {
@@ -36,8 +37,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 191, 255, 0.5), rgba(128, 0, 128, 0.5)); /* Голубой и фиолетовый */
-    transform: scaleX(2);
+    background: linear-gradient(to right, rgba(0, 191, 255, 0.5), rgba(14, 2, 255, 0.5)); /* Голубой и фиолетовый */
+    transform: scaleX(4);
     transform-origin: 0 50%;
     transition: transform 0.5s ease;
 }
